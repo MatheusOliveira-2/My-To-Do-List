@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Corrigi o box-sizing para ser 'border-box' */
+    font-family: "Josefin Sans", sans-serif;
+    outline: none;
+}
+
+body {
+    background: rgb(249,204,103);
+    background: linear-gradient(270deg, rgba(249,204,103,1) 0%, rgba(249,204,103,1) 0%, rgba(255,190,44,1) 50%);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: #fde6b2;
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 100px auto 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Ajusta a largura para caber melhor em telas menores */
+        margin: 50px auto 0; /* Reduz o espaçamento superior em telas menores */
+    }
+
+    .input-task {
+        width: 70%; /* Ajusta a largura do campo de input */
+    }
+
+    .button-add-task {
+        width: 25%; /* Ajusta a largura do botão para manter o layout fluido */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Ainda mais estreito em telas muito pequenas */
+        margin: 30px auto 0;
+        padding: 15px;
+    }
+
+    .input-task {
+        width: 100%; /* O input ocupa a largura total */
+        height: 35px; /* Reduz a altura do input */
+    }
+
+    .button-add-task {
+        width: 100%; /* O botão ocupa a largura total */
+        height: 35px; /* Reduz a altura do botão */
+        margin-top: 10px; /* Adiciona espaço acima do botão */
+        float: none; /* Remove o float para evitar problemas no layout */
+    }
+
+    .list-task {
+        margin-top: 20px; /* Ajuste no espaçamento da lista de tarefas */
+    }
+
+    .task {
+        height: 45px; /* Ajusta a altura das tarefas */
+        padding: 0 10px; /* Diminui o padding */
+    }
+
+    img {
+        height: 20px; /* Ajusta o tamanho da imagem de exclusão */
+    }
+}
+
+.input-task {
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.button-add-task {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #009620;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 0 15px;
+    float: right;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.button-add-task:hover {
+    opacity: 0.8;
+}
+
+.button-add-task:active {
+    opacity: 0.6;
+}
+
+.list-task {
+    width: 100%;
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.task {
+    background-color: #fdf9ea;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.task:hover img {
+    opacity: 1;
+}
+
+.done {
+    background-color: #2ff508;
+    text-decoration: line-through;
+}
